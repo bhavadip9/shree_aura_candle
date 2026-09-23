@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useStore } from '../state/store.js'
+import BrandLogo from './BrandLogo.jsx'
 
 export function Header() {
   const cart = useStore((s) => s.cart)
@@ -15,14 +16,16 @@ export function Header() {
 
   return (
     <header className={'site-header' + (scrolled ? ' scrolled' : '')}>
-      <a className="brand" href="#top">
-        <span className="brand-mark" aria-hidden="true" />
-        Shree <em>Aura</em> Candle
+      <a className="brand" href="#top" title="SA Candles">
+        <BrandLogo size={44} showBadge={true} badgeShape="rounded" />
+        <span className="brand-text">
+          SA <em>CANDLES</em>
+        </span>
       </a>
       <nav className="site-nav">
         <a href="#customize">Atelier</a>
         <a href="#craft">Craft</a>
-        <a href="#notes">Notes</a>
+        <a href="#notes">Fragrances</a>
       </nav>
       <button type="button" className="cart-btn" onClick={() => setCartOpen(true)} aria-label="Open cart">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -125,11 +128,13 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <span className="brand-mark" aria-hidden="true" />
-        Shree <em>Aura</em> Candle
+        <BrandLogo size={52} showBadge={true} badgeShape="circle" />
+        <span className="brand-text">
+          SA <em>CANDLES</em>
+        </span>
       </div>
-      <p>Bespoke candle studio · Poured to order · Ships across India</p>
-      <p className="footer-fine">© 2026 Shree Aura Candle — Built with a real-time 3D atelier.</p>
+      <p>Bespoke Candle Studio · Poured to Order · Handcrafted Luxury</p>
+      <p className="footer-fine">© 2026 SA CANDLES (Shree Aura) — Designed with real-time 3D atelier.</p>
     </footer>
   )
 }

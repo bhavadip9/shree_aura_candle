@@ -234,8 +234,8 @@ export async function drawLabel(canvas, config) {
   ctx.textAlign = 'center'
   ctx.textBaseline = 'alphabetic'
   ctx.fillStyle = pal.ink
-  ctx.font = '500 50px "Cormorant Garamond", serif'
-  ctx.fillText('SHREE AURA CANDLE', W / 2, style === 'birthday' ? 186 : 176)
+  ctx.font = '600 52px "Cormorant Garamond", serif'
+  ctx.fillText('SA CANDLES', W / 2, style === 'birthday' ? 186 : 176)
 
   // Fragrance
   ctx.font = '400 30px "Jost", sans-serif'

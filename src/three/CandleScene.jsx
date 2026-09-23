@@ -47,14 +47,16 @@ export default function CandleScene({ config }) {
           <CandleModel config={config} />
         </group>
 
+        <pointLight position={[0, 0.1, 0]} intensity={0.65} color="#ff881a" distance={4} />
+
         <ContactShadows
           position={[0, 0.001, 0]}
-          opacity={0.42}
+          opacity={0.72}
           scale={11}
-          blur={2.6}
+          blur={2.4}
           far={4.2}
           resolution={512}
-          color="#3c2412"
+          color="#000000"
           frames={Infinity}
         />
 
